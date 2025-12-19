@@ -1,0 +1,34 @@
+body {
+  background-color: rgb(156, 206, 248);
+}
+
+main {
+  background-color: white;
+  border-radius: 2em;
+  max-width: 350px;
+}
+
+.qr-code {
+  padding-top: 18px;
+  height: auto;
+  width: auto;
+}
+
+img {
+  width: 90%;
+  border-radius: 2em;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: small;
+  color: gray;
+}
