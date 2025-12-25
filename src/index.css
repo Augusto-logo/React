@@ -1,37 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
 @import "tailwindcss";
-/* @font-face {
-  font-family: 'Montserrat';
-  src: url('./styles/fonts/Montserrat-VariableFont_wght.ttf') format('truetype'),
-  url('./styles/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal, italic;
-} */
 
-/* :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  
-  color: black;
+@layer base {
+  body {
+    @apply text-base leading-normal text-gray-900 antialiased;
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  h1 {
+    @apply mb-4 text-4xl leading-tight font-bold;
+  }
+
+  h2 {
+    @apply mb-3 text-3xl leading-tight font-bold;
+  }
+
+  h3 {
+    @apply mb-3 text-2xl leading-snug font-semibold;
+  }
+
+  h4 {
+    @apply mb-2 text-xl leading-snug font-semibold;
+  }
+
+  h5 {
+    @apply mb-2 text-lg leading-snug font-semibold;
+  }
+
+  h6 {
+    @apply mb-2 text-base leading-snug font-semibold;
+  }
+
+  p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  a {
+    @apply text-blue-600 underline hover:text-blue-800;
+  }
+
+  ul {
+    @apply mb-4 list-inside list-disc;
+  }
+
+  ol {
+    @apply mb-4 list-inside list-decimal;
+  }
+
+  li {
+    @apply mb-1;
+  }
+
+  button {
+    @apply cursor-pointer rounded bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700;
+  }
+
+  input,
+  textarea {
+    @apply rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none;
+  }
+
+  img {
+    @apply h-auto max-w-full;
+  }
 }
 
-
-body {
-  background-color: white;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
-
-button {
-  cursor: pointer;
-  border: 1px solid black;
-  padding: 0.5em 1em;
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-fraunces: "Fraunces", sans-serif;
 }
