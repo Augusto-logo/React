@@ -10,10 +10,11 @@ interface BoardProps {
 export default function Board({ squares, onPlay, xIsNext }: BoardProps) {
   const [status, setStatus] = useState("Next Player: X");
   const [hasWinner, setHasWinner] = useState(false);
+  const [theWinningLine, setTheWinningLine] = useState<Array<number | null>>([null, null, null])
 
   const handleClick = (i: number) => {
     if (squares[i] || hasWinner) return;
-
+    
     const newSquares = squares.slice();
     if (xIsNext) {
       newSquares[i] = "X";
@@ -53,6 +54,7 @@ export default function Board({ squares, onPlay, xIsNext }: BoardProps) {
         squares[sqr1] === squares[sqr2] &&
         squares[sqr1] === squares[sqr3]
       ) {
+        setTheWinningLine(winningPossibility)
         winner = squares[sqr1];
         return squares[sqr1];
       }
@@ -62,24 +64,33 @@ export default function Board({ squares, onPlay, xIsNext }: BoardProps) {
     return null;
   };
 
+  //building squares
+  const rows = [];
+  for (let i = 0; i < 3; i++) {
+    const cols = [];
+    for (let j = 0; j < 3; j++) {
+      const k = i * 3 + j;
+      const isSquareWinner = theWinningLine.includes(k) ? true  : false
+        cols.push(
+          <Square
+            isSquareWinner={isSquareWinner}
+            key={k}
+            value={squares[k]}
+            onSquareClick={() => handleClick(k)}
+          />,
+        );
+    }
+    rows.push(
+      <div key={i} className="flex border-0">
+        {cols}
+      </div>,
+    );
+  }
+
   return (
     <>
       <div>{status}</div>
-      <div className="flex border-0">
-        <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-        <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-        <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-      </div>
-      <div className="flex border-0">
-        <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-        <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-        <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
-      </div>
-      <div className="flex border-0">
-        <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-        <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-        <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
-      </div>
+      {rows}
     </>
   );
 }

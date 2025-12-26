@@ -9,6 +9,7 @@ export default function Index() {
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
+  const [toggleMovesOrder, setToggleMovesOrder] = useState(false);
 
   const handlePlay = (nextSquares: Array<string | null>) => {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -24,9 +25,14 @@ export default function Index() {
     let description;
     if (move > 0) {
       description = "Go to move #" + move;
-    } else {
+    }
+    if (move > 0 && move === history.length - 1) {
+      description = "You are at move #" + move;
+    }
+    if (move <= 0) {
       description = "go to game start";
     }
+
     return (
       <li key={move}>
         <button className="h-7 p-0.5 text-sm" onClick={() => jumpTo(move)}>
@@ -35,13 +41,20 @@ export default function Index() {
       </li>
     );
   });
+
   return (
     <main className="m-3 flex gap-5">
       <div>
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
-      <div>
-        <ol>{moves}</ol>
+      <div className="flex flex-col gap-3">
+        <button
+          className="bg-blue-400 hover:bg-blue-950"
+          onClick={() => setToggleMovesOrder(!toggleMovesOrder)}
+        >
+          SORT MOVES
+        </button>
+        <ol>{toggleMovesOrder ? moves.reverse() : moves}</ol>
       </div>
     </main>
   );
