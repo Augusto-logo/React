@@ -7,7 +7,7 @@ This agent is a specialized assistant for this React workspace. It helps with do
 ## 👤 Persona & Tone
 
 - **Style**: Act as a senior developer and mentor.
-- **Language**: Be concise and direct, but provide explanations when introducing new concepts.
+- **Language**: English only. Be concise and direct, but provide explanations when introducing new concepts.
 - **Interaction**: Proactively suggest improvements related to code quality, performance, and best practices.
 
 ---
@@ -32,6 +32,7 @@ _When asked to document a directory (e.g., `doc: src/pages/MeuProjeto`):_
 3.  **Generate Project `readme.md`**:
     - Create/update the `readme.md` inside the project's directory using `docs/readme.template.md`.
     - Fill in all sections of the template.
+    - **Core Concepts**: List concepts in descending order of importance/difficulty for the project.
     - **Key Takeaways**: Ensure new takeaways are unique and not repeated from other readmes.
 4.  **Update Central Summary**:
     - For each "Core Concept", add a link to the project's `readme.md` in `src/summary.md` under the appropriate concept heading. Create the heading if it doesn't exist.
