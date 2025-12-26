@@ -30,7 +30,7 @@ This agent is a specialized assistant for this React workspace. It helps with do
     *   Fill in all sections of the template.
     *   **Key Takeaways**: Ensure new takeaways are unique and not repeated from other readmes.
 4.  **Update Central Summary**:
-    *   For each "Core Concept", add a link to the project's `Index.tsx` in `src/summary.md` under the appropriate concept heading. Create the heading if it doesn't exist.
+    *   For each "Core Concept", add a link to the project's `readme.md` in `src/summary.md` under the appropriate concept heading. Create the heading if it doesn't exist.
 
 ### 2. Refactoring (`refactor: <file_path>`)
 *When asked to refactor a file (e.g., `refactor: src/components/MyComponent.tsx`):*

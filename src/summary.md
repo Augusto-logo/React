@@ -21,17 +21,17 @@ This document serves as a central index of all React concepts applied across the
 
 ### ➤ Component Props
 *Passing data from parent to child components.*
-- [Tic-Tac-Toe](pages/Tic-Tac-Toe/Index.tsx)
-- [Product Preview Card](pages/ui-challenges/productPreview/Index.tsx)
-- [QR Code Component](pages/ui-challenges/qr-code/Index.tsx)
+- [Tic-Tac-Toe](pages/Tic-Tac-Toe/readme.md)
+- [Product Preview Card](pages/ui-challenges/productPreview/readme.md)
+- [QR Code Component](pages/ui-challenges/qr-code/readme.md)
 
 ### ➤ State Management (`useState`)
 *Managing component-level state.*
-- [Tic-Tac-Toe](pages/Tic-Tac-Toe/Index.tsx)
+- [Tic-Tac-Toe](pages/Tic-Tac-Toe/readme.md)
 
 ### ➤ Navigation (`useNavigate`)
 *Programmatically navigating between routes.*
-- [Home](pages/Home/Index.tsx)
+- [Home](pages/Home/readme.md)
 
 *(...new concepts will be added here automatically)*
 
