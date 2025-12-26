@@ -10,11 +10,15 @@ interface BoardProps {
 export default function Board({ squares, onPlay, xIsNext }: BoardProps) {
   const [status, setStatus] = useState("Next Player: X");
   const [hasWinner, setHasWinner] = useState(false);
-  const [theWinningLine, setTheWinningLine] = useState<Array<number | null>>([null, null, null])
+  const [theWinningLine, setTheWinningLine] = useState<Array<number | null>>([
+    null,
+    null,
+    null,
+  ]);
 
   const handleClick = (i: number) => {
     if (squares[i] || hasWinner) return;
-    
+
     const newSquares = squares.slice();
     if (xIsNext) {
       newSquares[i] = "X";
@@ -54,7 +58,7 @@ export default function Board({ squares, onPlay, xIsNext }: BoardProps) {
         squares[sqr1] === squares[sqr2] &&
         squares[sqr1] === squares[sqr3]
       ) {
-        setTheWinningLine(winningPossibility)
+        setTheWinningLine(winningPossibility);
         winner = squares[sqr1];
         return squares[sqr1];
       }
@@ -70,15 +74,15 @@ export default function Board({ squares, onPlay, xIsNext }: BoardProps) {
     const cols = [];
     for (let j = 0; j < 3; j++) {
       const k = i * 3 + j;
-      const isSquareWinner = theWinningLine.includes(k) ? true  : false
-        cols.push(
-          <Square
-            isSquareWinner={isSquareWinner}
-            key={k}
-            value={squares[k]}
-            onSquareClick={() => handleClick(k)}
-          />,
-        );
+      const isSquareWinner = theWinningLine.includes(k) ? true : false;
+      cols.push(
+        <Square
+          isSquareWinner={isSquareWinner}
+          key={k}
+          value={squares[k]}
+          onSquareClick={() => handleClick(k)}
+        />,
+      );
     }
     rows.push(
       <div key={i} className="flex border-0">

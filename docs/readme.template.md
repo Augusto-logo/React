@@ -32,6 +32,7 @@ _A list of implemented features or future tasks related to the project's require
 ## 📂 File Structure
 
 _A tree view of the files and folders for this specific project/component._
+
 ```
 /
 ├── Index.tsx
@@ -42,6 +43,7 @@ _A tree view of the files and folders for this specific project/component._
 ## 💡 Usage Example
 
 _A small code snippet showing how to import and use this component._
+
 ```tsx
 import [Component Name] from './[Component Name]';
 
