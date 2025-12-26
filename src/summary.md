@@ -6,7 +6,7 @@ This document serves as a central index of all React concepts applied across the
 
 ## 📖 Concept Index
 
-*This index provides quick navigation to concept sections below.*
+_This index provides quick navigation to concept sections below._
 
 - [React Concepts Summary](#react-concepts-summary)
   - [📖 Concept Index](#-concept-index)
@@ -20,18 +20,23 @@ This document serves as a central index of all React concepts applied across the
 ## ✨ Core Concepts
 
 ### ➤ Component Props
-*Passing data from parent to child components.*
+
+_Passing data from parent to child components._
+
 - [Tic-Tac-Toe](pages/Tic-Tac-Toe/readme.md)
 - [Product Preview Card](pages/ui-challenges/productPreview/readme.md)
 - [QR Code Component](pages/ui-challenges/qr-code/readme.md)
 
 ### ➤ State Management (`useState`)
-*Managing component-level state.*
+
+_Managing component-level state._
+
 - [Tic-Tac-Toe](pages/Tic-Tac-Toe/readme.md)
 
 ### ➤ Navigation (`useNavigate`)
-*Programmatically navigating between routes.*
+
+_Programmatically navigating between routes._
+
 - [Home](pages/Home/readme.md)
 
-*(...new concepts will be added here automatically)*
-
+_(...new concepts will be added here automatically)_

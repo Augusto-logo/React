@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Board from "./Components/Board";
 
-
 export default function Index() {
   const [history, setHistory] = useState<Array<Array<string | null>>>([
     Array(9).fill(null),

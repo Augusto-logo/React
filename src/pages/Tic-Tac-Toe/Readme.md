@@ -4,12 +4,14 @@ This project covers the **Tic-Tac-Toe** game from the official React documentati
 # Topics
 
 ## Core Concepts Involved
+
 - Components and Props
 - Managing State (useState)
 - Lifting State Up
 - Controlled Components
 
 ## Key Takeaways
+
 - How to structure a game board using nested components.
 - The importance of lifting state to a parent component to coordinate child components.
 - Implementation of "Time Travel" features by storing state history.

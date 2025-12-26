@@ -8,7 +8,10 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/ui-challenges/product-preview" element={<ProductPreview />} />
+      <Route
+        path="/ui-challenges/product-preview"
+        element={<ProductPreview />}
+      />
       <Route path="/ui-challenges/qr-code" element={<QrCode />} />
       <Route path="/tic-tac-toe" element={<TicTacToe />} />
     </Routes>
