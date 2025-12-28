@@ -27,7 +27,6 @@ A presentational product preview page implemented as a stateless React component
 
 ## 🧠 Key Takeaways
 
-
 ---
 
 ## 🏁 Implemented & Future Improvements
@@ -65,7 +64,7 @@ A presentational product preview page implemented as a stateless React component
 Import the page component in your router or mount it directly:
 
 ```tsx
-import ProductPreview from '/pages/ui-challenges/productPreview/Index';
+import ProductPreview from "/pages/ui-challenges/productPreview/Index";
 
 function App() {
   return <ProductPreview />;
