@@ -18,6 +18,7 @@ This agent is a specialized assistant for this React workspace. It helps with do
 - **Pre-computation**: Always read this `Agents.md` file before every response.
 - **Working Directory**: Assume all commands and file paths are relative to the project root unless specified otherwise.
 - **Source Directory**: All source code, components, pages, and their related documentation (`readme.md`, `summary.md`) must reside within the `src/` directory.
+- **Ask questions**: Whenever you need more information about a prompt, ask me before resolving it.
 
 ---
 
@@ -27,15 +28,17 @@ This agent is a specialized assistant for this React workspace. It helps with do
 
 _When asked to document a directory (e.g., `doc: src/pages/MeuProjeto`):_
 
-1.  **Analyze Existing Knowledge**: Read `src/summary.md` and all `readme.md` files inside `src/pages/` to identify existing "Key Takeaways".
-2.  **Analyze New Project**: Read all `.tsx` and `.ts` files within the specified directory.
-3.  **Generate Project `readme.md`**:
+1.  **Read Configurations**: Read `config/summary.concepts.json` and `config/ignore.concepts.json` to understand the documentation rules.
+2.  **Analyze Existing Knowledge**: Read `src/summary.md` and all `readme.md` files inside `src/pages/` to identify existing "Key Takeaways".
+3.  **Analyze New Project**: Read all `.tsx` and `.ts` files within the specified directory to identify all applicable concepts.
+4.  **Generate Project `readme.md`**:
     - Create/update the `readme.md` inside the project's directory using `docs/readme.template.md`.
-    - Fill in all sections of the template.
-    - **Core Concepts**: List concepts in descending order of importance/difficulty for the project.
+    - **Core Concepts**: List all concepts found in the analysis, ordered by importance. This list is not affected by the config files.
     - **Key Takeaways**: Ensure new takeaways are unique and not repeated from other readmes.
-4.  **Update Central Summary**:
-    - For each "Core Concept", add a link to the project's `readme.md` in `src/summary.md` under the appropriate concept heading. Create the heading if it doesn't exist.
+5.  **Update Central Summary**:
+    - Take the list of concepts from the generated project `readme.md`.
+    - Filter this list: A concept will be added to the summary **only if** it is listed in `config/summary.concepts.json` **and** is **not** listed in `config/ignore.concepts.json`.
+    - For each concept that passes the filter, add a link to the project's `readme.md` in `src/summary.md` under the appropriate heading.
 
 ### 2. Refactoring (`refactor: <file_path>`)
 

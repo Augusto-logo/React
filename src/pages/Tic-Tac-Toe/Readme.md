@@ -22,10 +22,7 @@ _Concepts are ordered by importance/difficulty for this specific project._
 - **Component Composition**: The UI is built by composing smaller, reusable components (`Index` -> `Board` -> `Square`).
 - **Derived State**: Some state is calculated on-the-fly from other state variables (e.g., `xIsNext` is derived from `currentMove`), avoiding state duplication and ensuring consistency.
 - **Conditional Rendering**: The UI changes based on the game's state, such as displaying the winner, the next player, or highlighting winning squares.
-- **Event Handling**: `onClick` handlers capture user interactions to update the game's state.
 - **List Rendering & Keys**: The `history` array is mapped to a list of buttons, with a unique `key` for each move to help React efficiently update the list.
-- **Pure Logic Separation**: The `calculateWinner` function is a pure function that only depends on its inputs, separating the game logic from the component's rendering concerns.
-- **TypeScript Integration**: `interface` is used to define prop types, ensuring type safety and improving code clarity.
 
 ---
 

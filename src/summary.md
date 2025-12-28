@@ -1,42 +1,61 @@
 # React Concepts Summary
 
-This document serves as a central index of all React concepts applied across the projects and components in this workspace. It is automatically updated by the agent based on the `readme.md` file of each documented item.
+This document serves as a central index of all React concepts applied across the projects and components in this workspace. It is automatically updated by the agent based on each project's `readme.md` and the rules in the `config/` directory.
 
 ---
 
 ## 📖 Concept Index
 
-_This index provides quick navigation to concept sections below._
+_Quick navigation to the concept sections below. Concepts are ordered by importance/difficulty._
 
 - [React Concepts Summary](#react-concepts-summary)
   - [📖 Concept Index](#-concept-index)
   - [✨ Core Concepts](#-core-concepts)
-    - [➤ Component Props](#-component-props)
+    - [➤ Lifting State Up](#-lifting-state-up)
+    - [➤ Immutability](#-immutability)
     - [➤ State Management (`useState`)](#-state-management-usestate)
-    - [➤ Navigation (`useNavigate`)](#-navigation-usenavigate)
+    - [➤ Dynamic UI Generation](#-dynamic-ui-generation)
+    - [➤ Derived State](#-derived-state)
+    - [➤ Conditional Rendering](#-conditional-rendering)
 
 ---
 
 ## ✨ Core Concepts
 
-### ➤ Component Props
+### ➤ Lifting State Up
 
-_Passing data from parent to child components._
+_Keeping shared state at the nearest common ancestor to synchronize child components._
 
 - [Tic-Tac-Toe](pages/Tic-Tac-Toe/readme.md)
-- [Product Preview Card](pages/ui-challenges/productPreview/readme.md)
-- [QR Code Component](pages/ui-challenges/qr-code/readme.md)
+
+### ➤ Immutability
+
+_Avoiding direct state mutation by creating copies, which is crucial for history and performance._
+
+- [Tic-Tac-Toe](pages/Tic-Tac-Toe/readme.md)
 
 ### ➤ State Management (`useState`)
 
-_Managing component-level state._
+_Managing component-level state using React hooks._
 
 - [Tic-Tac-Toe](pages/Tic-Tac-Toe/readme.md)
 
-### ➤ Navigation (`useNavigate`)
+### ➤ Dynamic UI Generation
 
-_Programmatically navigating between routes._
+_Generating UI elements from data structures (arrays/objects) instead of hardcoding._
 
-- [Home](pages/Home/readme.md)
+- [Tic-Tac-Toe](pages/Tic-Tac-Toe/readme.md)
 
-_(...new concepts will be added here automatically)_
+### ➤ Derived State
+
+_Computing state values from existing state/props rather than duplicating state._
+
+- [Tic-Tac-Toe](pages/Tic-Tac-Toe/readme.md)
+
+### ➤ Conditional Rendering
+
+_Rendering different UI based on application state (e.g., winner, next player)._
+
+- [Tic-Tac-Toe](pages/Tic-Tac-Toe/readme.md)
+
+_(...new concepts will be added here automatically as other projects are documented)_
